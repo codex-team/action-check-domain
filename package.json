@@ -1,5 +1,5 @@
 {
-  "name": "sample-github-action",
+  "name": "action-check-domain",
   "scripts": {
     "build": "ncc build index.js --minify"
   },

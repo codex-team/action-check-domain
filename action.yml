@@ -1,4 +1,4 @@
-name: 'Domain monitor'
+name: 'Domain and SSL cert watcher'
 description: 'Watch SSL certs and registry date expiring for your domains'
 branding:
   icon: 'alert-triangle'

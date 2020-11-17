@@ -1,4 +1,4 @@
-# Domain monitor
+# Domain and SSL cert watcher
 
 Watch SSL certs and registry date expiring for your domains.
 
