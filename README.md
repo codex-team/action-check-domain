@@ -47,7 +47,7 @@ You can create a workflow based on this action for checking your domains.
 
 Run will be scheduled by cron every day near 8:00 UTC (several minutes later because of github doesn't call your scripts at the time).
 
-If paid till (or SSL lifespan days) number is below limit then will be created a new issue.
+If paid till (or SSL lifespan days) number is below limit (for example 10 days) then will be created a new issue.
 
 ```yaml
 name: Check domains
