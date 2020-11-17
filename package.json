@@ -1,0 +1,12 @@
+{
+  "name": "sample-github-action",
+  "scripts": {
+    "build": "ncc build index.js --minify"
+  },
+  "devDependencies": {
+    "@actions/core": "^1.2.6",
+    "@vercel/ncc": "^0.25.1",
+    "parse-whois": "^1.0.0",
+    "whois": "^2.13.3"
+  }
+}

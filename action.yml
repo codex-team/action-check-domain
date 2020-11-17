@@ -1,0 +1,27 @@
+name: 'Domain monitor'
+description: 'Watch SSL certs and registry date expiring for your domains'
+branding:
+  icon: 'alert-triangle'
+  color: 'gray-dark'
+
+inputs:
+  url:
+    description: 'Site domain to be checked (with protocol)'
+    required: true
+
+outputs:
+  ssl-expire-date:
+    description: 'SSL certificate expire date'
+
+  ssl-expire-days-left:
+    description: 'SSL certificate expire number of days left'
+
+  paid-till-date:
+    description: 'Registry Expiry Date'
+
+  paid-till-days-left:
+    description: 'Registry Expiry number of days left'
+
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
