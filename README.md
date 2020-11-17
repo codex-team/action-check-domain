@@ -33,7 +33,7 @@ Registry Expiry number of days left
 ```yaml
 - name: Check domain SSL and registry expire date
   id: check-domain
-  uses: talyguryn/sample-github-action@v4.6
+  uses: codex-team/action-check-domain@v1
   with:
     url`: ${{ matrix.domain }}
 
@@ -68,7 +68,7 @@ jobs:
     steps:
       - name: Check domain SSL and registry expire date
         id: check-domain
-        uses: talyguryn/sample-github-action@v4.6
+        uses: codex-team/action-check-domain@v1
         with:
           url: ${{ matrix.domain }}
 
