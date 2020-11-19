@@ -78,7 +78,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           title: ⚠️ ${{ matrix.domain }} — registry expiries in ${{ steps.check-domain.outputs.paid-till-days-left }} days
-          body: 'Till: `${{ steps.check-domain.outputs.paid-till-date }}`'
+          body: 'Paid till: `${{ steps.check-domain.outputs.paid-till-date }}`'
 
       - name: Create an issue if SSL lifespan days number is below limit 
         if: ${{ steps.check-domain.outputs.ssl-expire-days-left && steps.check-domain.outputs.ssl-expire-days-left < 10 }}
@@ -86,5 +86,5 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           title: 🧨 ${{ matrix.domain }} — SSL cert expires in ${{ steps.check-domain.outputs.ssl-expire-days-left }} days
-          body: 'Till: `${{ steps.check-domain.outputs.ssl-expire-date }}`'
+          body: 'Valid till: `${{ steps.check-domain.outputs.ssl-expire-date }}`'
 ``` 
