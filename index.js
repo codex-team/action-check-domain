@@ -18,6 +18,14 @@ try {
             core.setOutput("ssl-expire-date", date.toString());
             core.setOutput("ssl-expire-days-left", Dates.countDays(date));
         })
+        .catch(error => {
+            if (error.code === 'CERT_HAS_EXPIRED') {
+                core.setOutput("ssl-expire-date", "INVALID");
+                core.setOutput("ssl-expire-days-left", -1);
+            }
+
+            throw error;
+        })
         .catch(core.error);
 
     /**
