@@ -8,6 +8,7 @@ const whois = require('whois');
 const KEYS = [
     'Registrar Registration Expiration Date',
     'Registry Expiry Date',
+    'Expiration Time',
     'paid-till'
 ];
 
@@ -21,7 +22,7 @@ function getDatePaidTill(domain) {
     domain = (new URL(domain)).host;
 
     return new Promise((resolve, reject) => {
-        whois.lookup(domain, function (err, data) {
+        whois.lookup(domain, function(err, data) {
             if (err) reject(err);
 
             const parsedData = parser.parseWhoIsData(data);
