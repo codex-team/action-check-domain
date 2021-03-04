@@ -8,7 +8,6 @@ const whois = require('whois');
 const KEYS = [
     'Registrar Registration Expiration Date',
     'Registry Expiry Date',
-    'Expiration Time',
     'paid-till'
 ];
 
