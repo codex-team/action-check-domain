@@ -18,8 +18,8 @@ const KEYS = [
  * @returns {Promise<Date>}
  */
 function getDatePaidTill(domain) {
-    /** Get domain from url */
-    domain = (new URL(domain)).host;
+    /** Get domain from url and strip subdomains */
+    domain = (new URL(domain)).host.split('.').splice(-2, 2).join('.');
 
     return new Promise((resolve, reject) => {
         whois.lookup(domain, function(err, data) {
